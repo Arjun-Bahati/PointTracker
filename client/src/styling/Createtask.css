@@ -5,6 +5,7 @@
     background-color: aliceblue;
     padding: 30px;
     font-size: larger;
+    max-width: 940px;
 }
 
 .createform{
