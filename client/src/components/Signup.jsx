@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Mainpage = (props) => {
+const Signup = (props) => {
     return(
         <div></div>
     );
 }
 
-export default Mainpage;
+export default Signup;

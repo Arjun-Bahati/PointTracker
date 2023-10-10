@@ -11,5 +11,6 @@ app.use(
 require("./config/mongoose");
 
 require("./routes/routes")(app);
+require("./routes/routes.total")(app);
 
 app.listen(8000, ()=>console.log("Server listening on port 8000"))

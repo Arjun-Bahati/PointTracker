@@ -1,36 +1,36 @@
-const Task = require("../models/model.task");
+const Total = require("../models/model.total");
 
 module.exports = {
     findAll: (req, res) => {
-        Task.find()
-            .then( allTasks => res.json(allTasks))
+        Total.find()
+            .then( allTotals => res.json(allTotals))
             .catch( err => res.status(400).json(err))
     },
 
     findOne: (req, res) => {
-        Task.findById(req.params.id)
-            .then( oneTask => res.json(oneTask))
+        Total.findById(req.params.id)
+            .then( oneTotal => res.json(oneTotal))
             .catch( err => res.status(400).json(err))
     },
 
     create: (req, res) => {
-        Task.create(req.body)
-            .then( newTask => res.json(newTask))
+        Total.create(req.body)
+            .then( newTotal => res.json(newTotal))
             .catch( err => res.status(400).json(err))
     },
 
     update: (req, res) => {
-        Task.findByIdAndUpdate({ _id: req.params.id}, req.body, {
+        Total.findByIdAndUpdate({ _id: req.params.id}, req.body, {
             new: true,
             runValidators: true,
         })
-            .then( updatedTask => res.json(updatedTask))
+            .then( updatedTotal => res.json(updatedTotal))
             .catch( err => res.status(400).json(err))
     },
-
+    
     delete: (req, res) => {
-        Task.findByIdAndDelete(req.params.id)
-            .then( deletedTask => res.json(deletedTask))
+        Total.findByIdAndDelete(req.params.id)
+            .then( deletedTotal => res.json(deletedTotal))
             .catch( err => res.status(400).json(err))
     }
 }

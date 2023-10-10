@@ -7,7 +7,7 @@ function App() {
     <>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Hub/>}/>
+        <Route path="/Pointtracker/*" element={<Hub/>}/>
       </Routes>
     </BrowserRouter>
     </>
