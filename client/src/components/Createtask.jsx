@@ -6,8 +6,8 @@ import "../styling/Createtask.css"
 
 const Createtask = (props) => {
     const [taskNotFoundError] = useState("");
-    const [points, setPoints] = useState([]);
-    const [task, setTask] = useState([]);
+    const [points, setPoints] = useState('');
+    const [task, setTask] = useState('');
     const [errors, setErrors] = useState([]);
     const navigate = useNavigate();
 

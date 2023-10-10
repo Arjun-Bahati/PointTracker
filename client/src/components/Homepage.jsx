@@ -25,10 +25,7 @@ const Homepage = ({total, setTotal}) => {
         .get("http://localhost:8000/api/total")
         .then((response) =>{
             console.log(response.data)
-            if (response.data.total == 0 || null || undefined){
-                setTotal(0)
-            } else{ setTotal(response.data.total)}
-            console.log(total)
+            setTotal(response.data[0].total)
         })
         .catch((err) => {
             console.log(err);

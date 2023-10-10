@@ -12,8 +12,8 @@ useEffect(() => {
     axios
     .get("http://localhost:8000/api/total/")
     .then((response) => {
-        console.log(response);
-        setTotal(response.data[1])
+        console.log("total API response",response);
+        setTotal(response.data[0].total)
         console.log(total)
     })
     .catch((err) => {

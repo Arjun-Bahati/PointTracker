@@ -2,7 +2,6 @@ import React from 'react';
 import {Routes, Route} from "react-router-dom";
 import { useState } from 'react';
 import NoLogin from '../components/NoLogin';
-import LoginPage from '../components/LoginPage';
 import Register from '../components/Register';
 import Homepage from '../components/Homepage';
 import Createtask from '../components/Createtask';
@@ -18,11 +17,7 @@ const Hub = (props) => {
     <div>
     <Routes>
         <Route path="/" element={<NoLogin/>} />
-
-        <Route path="/login" element={<LoginPage/>} />
-
         <Route path="/register" element={<Register/>} />
-
         <Route path="/home" element={<Homepage total = {total} setTotal= {setTotal}/>} />
         <Route path="/create" element={<Createtask/>}/>
         <Route path="/:id" element={<Taskview/>} />
