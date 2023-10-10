@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import {useState, useEffect} from "react";
+import "../styling/Homepage.css"
 
 const Homepage = ({total, setTotal}) => {   
     
@@ -24,7 +25,10 @@ const Homepage = ({total, setTotal}) => {
         .get("http://localhost:8000/api/total")
         .then((response) =>{
             console.log(response.data)
-            setTotal(response.data.points)
+            if (response.data.total == 0 || null || undefined){
+                setTotal(0)
+            } else{ setTotal(response.data.total)}
+            console.log(total)
         })
         .catch((err) => {
             console.log(err);
@@ -32,7 +36,7 @@ const Homepage = ({total, setTotal}) => {
     }, []);
 
     return(
-        <>
+        <div className='home'>
             <Link to="../create"><button>Add a task!</button></Link>
             <table>
                 <tbody>
@@ -45,9 +49,8 @@ const Homepage = ({total, setTotal}) => {
                             })}
                 </tbody>
             </table>
-            <h1>You currently have:</h1>
-            <h2>{total} Points!</h2>
-        </>
+            <h2>You currently have: {total} Points!</h2>
+        </div>
     );
 }
 

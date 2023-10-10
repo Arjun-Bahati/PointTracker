@@ -3,7 +3,7 @@ import {Routes, Route} from "react-router-dom";
 import { useState } from 'react';
 import NoLogin from '../components/NoLogin';
 import LoginPage from '../components/LoginPage';
-import Signup from '../components/Signup';
+import Register from '../components/Register';
 import Homepage from '../components/Homepage';
 import Createtask from '../components/Createtask';
 import Submittask from '../components/Submittask';
@@ -12,24 +12,26 @@ import TaskEdit from '../components/Taskedit';
 
 const Hub = (props) => {
     const [total, setTotal] = useState([])
+    const placeholderID = "65251240da7adb287e979af5"
 
     return(
+    <div>
     <Routes>
-
         <Route path="/" element={<NoLogin/>} />
 
-        <Route path="/sdfs" element={<LoginPage/>} />
+        <Route path="/login" element={<LoginPage/>} />
 
-        <Route path="/sdfs" element={<Signup/>} />
+        <Route path="/register" element={<Register/>} />
 
         <Route path="/home" element={<Homepage total = {total} setTotal= {setTotal}/>} />
-        <Route path="/create" element={<Createtask/>} />
+        <Route path="/create" element={<Createtask/>}/>
         <Route path="/:id" element={<Taskview/>} />
-        <Route path="/submit/:id" element={<Submittask/>} />
+        <Route path="/submit/:id" element={<Submittask placeholderID = {placeholderID}/>} />
         <Route path="/edit/:id" element={<TaskEdit/>} />
         <Route path="/*" element="This page is inaccessible by normal means"/>
 
     </Routes>
+    </div>
     );
 }
 

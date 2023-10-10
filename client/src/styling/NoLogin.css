@@ -1,0 +1,9 @@
+.nologin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 70px;
+    font-size: larger;
+}

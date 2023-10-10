@@ -27,10 +27,4 @@ module.exports = {
             .then( updatedTotal => res.json(updatedTotal))
             .catch( err => res.status(400).json(err))
     },
-    
-    delete: (req, res) => {
-        Total.findByIdAndDelete(req.params.id)
-            .then( deletedTotal => res.json(deletedTotal))
-            .catch( err => res.status(400).json(err))
-    }
 }

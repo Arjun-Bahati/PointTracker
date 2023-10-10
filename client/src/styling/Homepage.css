@@ -1,0 +1,9 @@
+.home{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: aliceblue;
+    padding: 30px;
+    font-size: larger;
+}

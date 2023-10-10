@@ -5,5 +5,4 @@ module.exports = app => {
     app.post("/api/total", totalController.create);
     app.get("/api/total/:id", totalController.findOne);
     app.put("/api/total/:id", totalController.update);
-    app.delete("/api/total/:id", totalController.delete);
 }

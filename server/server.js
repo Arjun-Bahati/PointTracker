@@ -3,7 +3,7 @@ const cors = require("cors");
 const app = express();
 
 app.use(
-    cors(),
+    cors({origin: "http://localhost:5173",}),
     express.json(),
     express.urlencoded({extended: true})
 )

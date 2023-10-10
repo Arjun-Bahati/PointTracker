@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import {Link, useNavigate, useParams} from 'react-router-dom';
 import axios from 'axios';
+import "../styling/TaskEdit.css"
 
 const TaskEdit = (props) => {
     const [taskNotFoundError, setTaskNotFoundError] = useState("");
@@ -47,7 +48,7 @@ const TaskEdit = (props) => {
     };
 
     return(
-        <div>
+        <div className='edit'>
         <Link to="../home">Go back home?</Link>
         <p>Editing this task...</p>
         <form onSubmit={handleSubmit}>

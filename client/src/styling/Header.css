@@ -1,0 +1,11 @@
+.header {
+    box-sizing: border-box;
+    width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 1em;
+    margin-bottom: 2em;
+    background-color: rgb(18, 78, 39);
+    color: #fff;
+}

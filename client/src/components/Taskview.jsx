@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import "../styling/Taskview.css"
 
 const Taskview = (props) => {
     const [taskview, setTaskview] = useState([]);
@@ -31,9 +31,9 @@ const Taskview = (props) => {
             });
     }; 
     return(
-        <div>
-            <h1>{taskview.task}</h1>
-            <h2>{taskview.points}</h2>
+        <div className='view'>
+            <h2>{taskview.task}</h2>      
+            <h2>{taskview.points} Points</h2>
             <Link to={"../submit/" + id}><button>The task has been done!</button></Link>
             <Link to={"../edit/" + id}><button>Edit this task!</button></Link>
             <Link to="../home"><button>Back to homepage</button></Link>
